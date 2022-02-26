@@ -1,0 +1,21 @@
+img{
+    height: auto;
+    width: auto;
+  
+    justify-content: center;
+                }
+p{
+    
+                    color:green;
+                    font-weight:bolder;
+                    text-align: center;
+                    font-family: Arial;
+                    }
+                    h1{
+    
+                        color:rgb(46, 199, 46);
+                        font-weight:bolder;
+                        text-align: center;
+                        font-family: Arial;
+                        }
+                

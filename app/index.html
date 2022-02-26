@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />-->
+<title>MAPA UNIANDES</title>
+<link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link  rel="stylesheet" href="estilos/style.css"  type="text/css">
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
+
+
+	<script>
+			/*
+			vamos a obtener la dimension de la pantalla
+			*/
+			var meta = document.createElement("meta"); //creamos un elemento tipo meta 
+			meta.setAttribute('name','viewport'); // le asignaremos el atributo name con la propiedad viewport
+			meta.setAttribute('content','initial-scale='+ (1/window.devicePixelRatio) + ',user-scalable=no'); 
+			/*
+			a nuestro elemento meta le asignamos el atributo content con los atributos initial-scale donde tomaremos el ratio de 
+			la pantalla del dispositivo para que nuestra aplicacion no se "deforme" 
+			al igual que agregamos user-scalable=no para que el usuario no pueda hacer "zoom in" a nuestra app
+			*/
+			document.getElementsByTagName('head')[0].appendChild(meta);
+		</script>
+</head> 
+<body>
+
+<div data-role="page" id="page">
+	
+  <div data-role="header">
+   <center><h1>UNIANDES</h1></center> 
+   <br/>
+   <center><img src="images/uni.jpg" ></center>
+   <br/>
+  </div>
+  
+  <div data-role="content">
+  
+  <center><button type="button" onClick="getPosition()">Obtener información del GPS</button>  </center>
+                <div id="geolocationInfo"></div>  
+                <br>  
+                 <div  id="map_canvas_ruta" style="height:400px;"></div>
+  
+  </div>
+</div>
+
+<script src="index.js" type="text/javascript"></script>
+<h1>AUTORES</h1>
+<p>BRYAN GOMEZ - WELLINGTON CASTILLO - GEORGE LUZRIAGA - OSCAR LOPEZ</p>
+</body>
+</html>
